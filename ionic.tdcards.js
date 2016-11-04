@@ -398,7 +398,8 @@
       scope: {},
       controller: ['$scope', '$element', function($scope, $element) {
         var cards;
-        var firstCard, secondCard, thirdCard;
+        var firstCard;
+        //, secondCard, thirdCard;
 
         var existingCards, card;
 
@@ -431,11 +432,11 @@
         this.partial = function(amt) {
           cards = $element[0].querySelectorAll('td-card');
           firstCard = cards[0];
-          secondCard = cards.length > 2 && cards[1];
-          thirdCard = cards.length > 3 && cards[2];
+          // secondCard = cards.length > 2 && cards[1];
+          // thirdCard = cards.length > 3 && cards[2];
 
-          secondCard && bringCardUp(secondCard, amt, 4);
-          thirdCard && bringCardUp(thirdCard, amt, 8);
+          // secondCard && bringCardUp(secondCard, amt, 4);
+          // thirdCard && bringCardUp(thirdCard, amt, 8);
         };
       }]
     }
