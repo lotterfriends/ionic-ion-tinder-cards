@@ -405,36 +405,35 @@
 
         var i, j;
 
-        var sortCards = function() {
-          existingCards = $element[0].querySelectorAll('td-card');
+        // var sortCards = function() {
+        //   existingCards = $element[0].querySelectorAll('td-card');
 
-          for(i = 0; i < existingCards.length; i++) {
-            card = existingCards[i];
-            if(!card) continue;
-            if(i > 0) {
-              card.style.transform = card.style.webkitTransform = 'translate3d(0, ' + (i * 4) + 'px, 0)';
-            }
-            card.style.zIndex = (existingCards.length - i);
-          }
-        };
+        //   for(i = 0; i < existingCards.length; i++) {
+        //     card = existingCards[i];
+        //     if(!card) continue;
+        //     if(i > 0) {
+        //       card.style.transform = card.style.webkitTransform = 'translate3d(0, ' + (i * 4) + 'px, 0)';
+        //     }
+        //     card.style.zIndex = (existingCards.length - i);
+        //   }
+        // };
 
-        $timeout(function() {
-          sortCards();
-        });
+        // $timeout(function() {
+        //   sortCards();
+        // });
 
-        var bringCardUp = function(card, amt, max) {
-          var position, newTop;
-          position = card.style.transform || card.style.webkitTransform;
-          newTop = Math.max(0, Math.min(max, max - (max * Math.abs(amt))));
-          card.style.transform = card.style.webkitTransform = 'translate3d(0, ' + newTop + 'px, 0)';
-        };
+        // var bringCardUp = function(card, amt, max) {
+        //   var position, newTop;
+        //   position = card.style.transform || card.style.webkitTransform;
+        //   newTop = Math.max(0, Math.min(max, max - (max * Math.abs(amt))));
+        //   card.style.transform = card.style.webkitTransform = 'translate3d(0, ' + newTop + 'px, 0)';
+        // };
 
         this.partial = function(amt) {
           cards = $element[0].querySelectorAll('td-card');
           firstCard = cards[0];
           // secondCard = cards.length > 2 && cards[1];
           // thirdCard = cards.length > 3 && cards[2];
-
           // secondCard && bringCardUp(secondCard, amt, 4);
           // thirdCard && bringCardUp(thirdCard, amt, 8);
         };
