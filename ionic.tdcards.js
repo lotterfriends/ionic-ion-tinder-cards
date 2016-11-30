@@ -35,7 +35,7 @@
 
       this.el = opts.el;
 
-      this.parentWidth = this.el.parentNode.offsetWidth;
+      this.parentWidth = screen.width; // this.el.parentNode.offsetWidth;
       this.width = this.el.offsetWidth;
 
       this.startX = this.startY = this.x = this.y = 0;
